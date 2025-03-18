@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="100x100" href="img/favicon/11.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/favicon.ico" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#a9afb6">
+    <meta name="theme-color" content="#000000">
+    <title>Adrenalin Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="scrollToTop" title="Go to top" onclick="scrollToTop()"></button>
+    <script>
+        window.onscroll = function() {
+            const button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show'); 
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <div id="price" hidden>
+        <div class="priceList">
+            <button onclick="hiddenElement ()" id="closePrise">X</button>
+            <div class="priceBlock">
+                <div class="priceImg"><img class="priceBlockImg"
+                        src="img/otherImg/priceList.jpg" alt=""></div>
+                <div class="priceImg"><img class="priceBlockImg"
+                        src="img/otherImg/priceList20.jpg" alt=""></div>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="contentBox headerBox">
+                <!-- LOGO -->
+                <div class="box logoBox"><a href="index.html">
+                        <img src="img/favicon/12.png"
+                            alt="aaa">
+                    </a>
+                </div>
+                <!-- Блок с преимуществами -->
+                <div class="box ourAdvabtages">
+                    <ul>
+                        <li><img src="img/IcoLogo/quality.png"
+                                alt="качество нашего товара">
+                            <p>Гарантируем высокое качество тренажеров и услуг.</p>
+                        </li>
+                        <li><img src="img/IcoLogo/design.png"
+                                alt="персональные тренировки">
+                            <p>Индивидуальные тренировки под ваши цели и потребности.</p>
+                        </li>
+                        <li><img src="img/IcoLogo/warehouse.png"
+                                alt="оснащение зала">
+                            <p>Современное оборудование и комфортная атмосфера.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- блок с контактами -->
+                <div class="box contactsBox">
+                    <ul>
+                        <li><img src="img/IcoLogo/phone.png" alt="наш телефон"> <a
+                                href="tel:+375292356331">+375 (29) 235-63-31</a></li>
+                        <li><img src="img/IcoLogo/pngwing(7).png"
+                                alt="электронная почта"> <a href="mailto:adrenalin-fitness@mail.ru"
+                                target="_blank">adrenaline-fitness@mail.ru</a></li>
+                        <li><img src="img/IcoLogo/instagramm.png"
+                                alt="наш инстаграмм">
+                            <a href="https://www.instagram.com/adrenalin.belarus/" target="_blank">adrenalin.belarus</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="galery">
+                <a href="index.html" target="_self" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/1.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Главная</p>
+                </a>
+                <a href="page-withus.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/2.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Услуги</p>
+                </a>
+                <a href="page-withkorp.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/3.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Расписание</p>
+                </a>
+                <a href="page-about-us.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/4.jpeg" alt=""class="galeryItem">
+                    <p class="galeryTxt">О нас</p>
+                </a>
+                <a href="page-contacts.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/5.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Контакты</p>
+                </a>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const currentPage = window.location.pathname.split("/").pop();
+                        const galleryLinks = document.querySelectorAll('.galeruLinks');
+
+                        galleryLinks.forEach(link => {
+                            const linkHref = link.getAttribute('href');
+                            if (linkHref === currentPage) {
+                                link.style.display = 'none';
+                            }
+                        });
+                    });
+                </script>
+
+            </section>
+
+            <section class="OurWork">
+                <aside id="refersSection">
+                    </div>
+                </aside>
+                <article>
+                    <h2>Наши Контакты</h2>
+                    <div class="markeredTekst">
+                        <span>1</span>
+                        <picture>Вы можете связаться с нами любым удобным способом:</picture>
+                        </div>
+                        <div class="markeredTekst">
+                        <ol>
+                            <li>Телефон: +375 (29) 235-63-31</li>
+                            <li>Email: adrenaline-fitness@mail.ru </li>
+                            <li>Адрес главного здания: г. Минск, ул. Спортивная, д. 15</li>
+                        </ol>
+                    </div>
+                    <div class="markeredTekst">
+                        <span>2</span>
+                        <p>Также вы можете написать нам в Instagram: adrenalin.belarus</p>
+                    </div>
+                    <div class="markeredTekst">
+                        <span>3</span>
+                        <p>Мы всегда готовы ответить на ваши вопросы и помочь вам!</p>
+                    </div>
+                    <div class="markeredTekst">
+                        <span>4</span>
+                        <p>Наши тренеры также доступны для консультаций по телефонам в рабочее время с 9:00 до 14:00:</p>
+                    </div>
+                    <div class="markeredTekst">
+                        <ol>
+                            <li>Анна Петрова - Телефон: +375 (29) 235-63-32</li>
+                            <li>Игорь Иванов - Телефон: +375 (29) 235-63-33</li>
+                            <li>Мария Смирнова - Телефон: +375 (29) 235-63-34</li>
+                            <li>Дмитрий Орлов - Телефон: +375 (29) 235-63-35</li>
+                        </ol>
+                    </div>
+                </article>
+                <aside style="margin-right: 20px;">
+                </aside>
+            </section>
+
+    </main>
+</body>
+</html>

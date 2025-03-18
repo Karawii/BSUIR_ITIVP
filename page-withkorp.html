@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="100x100" href="img/favicon/11.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/favicon.ico" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#a9afb6">
+    <meta name="theme-color" content="#000000">
+    <title>Adrenalin Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="scrollToTop" title="Go to top" onclick="scrollToTop()"></button>
+    <script>
+        window.onscroll = function() {
+            const button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <div id="price" hidden>
+        <div class="priceList">
+            <button onclick="hiddenElement ()" id="closePrise">X</button>
+            <div class="priceBlock">
+                <div class="priceImg"><img class="priceBlockImg" src="img/otherImg/priceList.jpg" alt=""></div>
+                <div class="priceImg"><img class="priceBlockImg" src="img/otherImg/priceList20.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="contentBox headerBox">
+                <!-- LOGO -->
+                <div class="box logoBox"><a href="index.html">
+                        <img src="img/favicon/12.png"
+                            alt="Logo chocologo_by">
+                    </a>
+                </div>
+                <!-- Блок с преимуществами -->
+                <div class="box ourAdvabtages">
+                    <ul>
+                        <li><img src="img/IcoLogo/quality.png"
+                                alt="качество нашего товара">
+                            <p>Гарантируем высокое качество тренажеров и услуг.</p>
+                        </li>
+                        <li><img src="img/IcoLogo/design.png"
+                                alt="персональные тренировки">
+                            <p>Индивидуальные тренировки под ваши цели и потребности.</p>
+                        </li>
+                        <li><img src="img/IcoLogo/warehouse.png"
+                                alt="оснащение зала">
+                            <p>Современное оборудование и комфортная атмосфера.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- блок с контактами -->
+                <div class="box contactsBox">
+                    <ul>
+                        <li><img src="img/IcoLogo/phone.png" alt="наш телефон"> <a
+                                href="tel:+375292356331">+375 (29) 235-63-31</a></li>
+                        <li><img src="img/IcoLogo/pngwing(7).png"
+                                alt="электронная почта"> <a href="mailto:adrenalin-fitness@mail.ru"
+                                target="_blank">adrenaline-fitness@mail.ru</a></li>
+                        <li><img src="img/IcoLogo/instagramm.png"
+                                alt="наш инстаграмм">
+                            <a href="https://www.instagram.com/adrenalin.belarus/" target="_blank">adrenalin.belarus</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section class="galery">
+                <a href="index.html" target="_self" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/1.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Главная</p>
+                </a>
+                <a href="page-withus.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/2.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Услуги</p>
+                </a>
+                <a href="page-withkorp.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/3.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Расписание</p>
+                </a>
+                <a href="page-about-us.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/4.jpeg" alt="" class="galeryItem">
+                    <p class="galeryTxt">О нас</p>
+                </a>
+                <a href="page-contacts.html" class="galeruLinks">
+                    <img src="img/otherImg/MainPage/5.jpg" alt="" class="galeryItem">
+                    <p class="galeryTxt">Контакты</p>
+                </a>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const currentPage = window.location.pathname.split("/").pop();
+                        const galleryLinks = document.querySelectorAll('.galeruLinks');
+
+                        galleryLinks.forEach(link => {
+                            const linkHref = link.getAttribute('href');
+                            if (linkHref === currentPage) {
+                                link.style.display = 'none';
+                            }
+                        });
+                    });
+                </script>
+            </section>
+
+            <br><h2>Расписание занятий</h2>
+
+            <!-- Расписание занятий -->
+            <section class="schedule">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Время</th>
+                                <th>Понедельник</th>
+                                <th>Вторник</th>
+                                <th>Среда</th>
+                                <th>Четверг</th>
+                                <th>Пятница</th>
+                                <th>Суббота</th>
+                                <th>Воскресенье</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Время">09:00</td>
+                                <td data-label="Понедельник">
+                                    <div>Силовая тренировка</div>
+                                    <div>Иванов И.И.</div>
+                                    <button onclick="openForm('09:00', 'Понедельник', 'Силовая тренировка', 'Иванов И.И.')">Записаться</button>
+                                </td>
+                                <td data-label="Вторник">
+                                    <div>Кардио тренировка</div>
+                                    <div>Петров П.П.</div>
+                                    <button onclick="openForm('09:00', 'Вторник', 'Кардио тренировка', 'Петров П.П.')">Записаться</button>
+                                </td>
+                                <td data-label="Среда">
+                                    <div>Фитнес для начинающих</div>
+                                    <div>Сидоров С.С.</div>
+                                    <button onclick="openForm('09:00', 'Среда', 'Фитнес для начинающих', 'Сидоров С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Четверг">
+                                    <div>Йога</div>
+                                    <div>Кузнецов К.К.</div>
+                                    <button onclick="openForm('09:00', 'Четверг', 'Йога', 'Кузнецов К.К.')">Записаться</button>
+                                </td>
+                                <td data-label="Пятница">
+                                    <div>Пилатес</div>
+                                    <div>Смирнов С.С.</div>
+                                    <button onclick="openForm('09:00', 'Пятница', 'Пилатес', 'Смирнов С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Суббота">
+                                    <div>Тренировка на выносливость</div>
+                                    <div>Тихонов Т.Т.</div>
+                                    <button onclick="openForm('09:00', 'Суббота', 'Тренировка на выносливость', 'Тихонов Т.Т.')">Записаться</button>
+                                </td>
+                                <td data-label="Воскресенье">
+                                    <div>Семейная тренировка</div>
+                                    <div>Николаев Н.Н.</div>
+                                    <button onclick="openForm('09:00', 'Воскресенье', 'Семейная тренировка', 'Николаев Н.Н.')">Записаться</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Время">11:00</td>
+                                <td data-label="Понедельник">
+                                    <div>Кроссфит</div>
+                                    <div>Иванов И.И.</div>
+                                    <button onclick="openForm('11:00', 'Понедельник', 'Кроссфит', 'Иванов И.И.')">Записаться</button>
+                                </td>
+                                <td data-label="Вторник">
+                                    <div>Танцевальная аэробика</div>
+                                    <div>Петров П.П.</div>
+                                    <button onclick="openForm('11:00', 'Вторник', 'Танцевальная аэробика', 'Петров П.П.')">Записаться</button>
+                                </td>
+                                <td data-label="Среда">
+                                    <div>Спортивная гимнастика</div>
+                                    <div>Сидоров С.С.</div>
+                                    <button onclick="openForm('11:00', 'Среда', 'Спортивная гимнастика', 'Сидоров С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Четверг">
+                                    <div>Хатха-йога</div>
+                                    <div>Кузнецов К.К.</div>
+                                    <button onclick="openForm('11:00', 'Четверг', 'Хатха-йога', 'Кузнецов К.К.')">Записаться</button>
+                                </td>
+                                <td data-label="Пятница">
+                                    <div>Силовая тренировка</div>
+                                    <div>Смирнов С.С.</div>
+                                    <button onclick="openForm('11:00', 'Пятница', 'Силовая тренировка', 'Смирнов С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Суббота">
+                                    <div>Тренировка на растяжку</div>
+                                    <div>Тихонов Т.Т.</div>
+                                    <button onclick="openForm('11:00', 'Суббота', 'Тренировка на растяжку', 'Тихонов Т.Т.')">Записаться</button>
+                                </td>
+                                <td data-label="Воскресенье">
+                                    <div>Здоровый спин</div>
+                                    <div>Николаев Н.Н.</div>
+                                    <button onclick="openForm('11:00', 'Воскресенье', 'Здоровый спин', 'Николаев Н.Н.')">Записаться</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Время">13:00</td>
+                                <td data-label="Понедельник">
+                                    <div>Функциональная тренировка</div>
+                                    <div>Иванов И.И.</div>
+                                    <button onclick="openForm('13:00', 'Понедельник', 'Функциональная тренировка', 'Иванов И.И.')">Записаться</button>
+                                </td>
+                                <td data-label="Вторник">
+                                    <div>Бокс</div>
+                                    <div>Петров П.П.</div>
+                                    <button onclick="openForm('13:00', 'Вторник', 'Бокс', 'Петров П.П.')">Записаться</button>
+                                </td>
+                                <td data-label="Среда">
+                                    <div>Тайский бокс</div>
+                                    <div>Сидоров С.С.</div>
+                                    <button onclick="openForm('13:00', 'Среда', 'Тайский бокс', 'Сидоров С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Четверг">
+                                    <div>Танцы</div>
+                                    <div>Кузнецов К.К.</div>
+                                    <button onclick="openForm('13:00', 'Четверг', 'Танцы', 'Кузнецов К.К.')">Записаться</button>
+                                </td>
+                                <td data-label="Пятница">
+                                    <div>Кикбоксинг</div>
+                                    <div>Смирнов С.С.</div>
+                                    <button onclick="openForm('13:00', 'Пятница', 'Кикбоксинг', 'Смирнов С.С.')">Записаться</button>
+                                </td>
+                                <td data-label="Суббота">
+                                    <div>Плавание</div>
+                                    <div>Тихонов Т.Т.</div>
+                                    <button onclick="openForm('13:00', 'Суббота', 'Плавание', 'Тихонов Т.Т.')">Записаться</button>
+                                </td>
+                                <td data-label="Воскресенье">
+                                    <div>Групповая тренировка</div>
+                                    <div>Николаев Н.Н.</div>
+                                    <button onclick="openForm('13:00', 'Воскресенье', 'Групповая тренировка', 'Николаев Н.Н.')">Записаться</button>
+                                </td>
+                            </tr>
+                            <!-- Добавьте дополнительные временные интервалы аналогично -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+    <!-- Модальное окно для записи -->
+    <div id="bookingFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Запись на тренировку</h2>
+            <form id="bookingForm">
+                <label for="time">Время:</label>
+                <input type="text" id="time" name="time" readonly><br>
+                <label for="day">День:</label>
+                <input type="text" id="day" name="day" readonly><br>
+                <label for="training">Название тренировки:</label>
+                <input type="text" id="training" name="training" readonly><br>
+                <label for="trainer">Тренер:</label>
+                <input type="text" id="trainer" name="trainer" readonly><br>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" required><br>
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="cost">Стоимость услуги:</label>
+                <input type="text" id="cost" name="cost" value="30 BYN" readonly><br>
+                <button type="submit">Записаться</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm(time, day, training, trainer) {
+        document.getElementById('time').value = time;
+        document.getElementById('day').value = day;
+        document.getElementById('training').value = training;
+        document.getElementById('trainer').value = trainer;
+        const modal = document.getElementById('bookingFormModal');
+        modal.style.display = 'block'; 
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.marginTop = `${(window.innerHeight - modalContent.offsetHeight) / 2}px`;
+        }
+
+        function closeForm() {
+            document.getElementById('bookingFormModal').style.display = 'none';
+        }
+
+        document.getElementById('bookingForm').onsubmit = function(event) {
+            event.preventDefault();
+            alert('Вы успешно записались на ' + document.getElementById('training').value);
+            closeForm();
+        };
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('bookingFormModal')) {
+                closeForm();
+            }
+        };
+    </script>
+</body>
+</main>
+<p>© 2025 Адреналин </p>
+</html>
