@@ -15,29 +15,7 @@
 <body>
 
     <button id="scrollToTop" title="Go to top" onclick="scrollToTop()"></button>
-    <script>
-        window.onscroll = function() {
-            const button = document.getElementById("scrollToTop");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                button.classList.add('show');
-            } else {
-                button.classList.remove('show');
-            }
-        };
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
-    <div id="price" hidden>
-        <div class="priceList">
-            <button onclick="hiddenElement ()" id="closePrise">X</button>
-            <div class="priceBlock">
-                <div class="priceImg"><img class="priceBlockImg" src="img/otherImg/priceList.jpg" alt=""></div>
-                <div class="priceImg"><img class="priceBlockImg" src="img/otherImg/priceList20.jpg" alt=""></div>
-            </div>
-        </div>
-    </div>
+    <script src="script.js"></script>
 
     <!-- HEADER -->
     <header>
@@ -257,7 +235,6 @@
                                     <button onclick="openForm('13:00', 'Воскресенье', 'Групповая тренировка', 'Николаев Н.Н.')">Записаться</button>
                                 </td>
                             </tr>
-                            <!-- Добавьте дополнительные временные интервалы аналогично -->
                         </tbody>
                     </table>
                 </div>

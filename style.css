@@ -1,6 +1,6 @@
 :root {
-    --bgColor: rgb(255, 255, 255); /* Светло-красный */
-    --akcentColor: rgb(200, 0, 0); /* Темно-красный */
+    --bgColor: rgb(255, 255, 255);
+    --akcentColor: rgb(200, 0, 0);
 }
 
 @font-face {
@@ -145,21 +145,13 @@ body {
 
 
 
-/* HEADER */
-
 header {
     height: auto;
     max-height: 200px;
     width: 100%;
-
     background-color: var(--akcentColor);
     color: var(--bgColor);
-
     padding: 0 auto;
-
-    /* display: flex;
-    align-items: center;
-  justify-content: center; */
 }
 
 #price {
@@ -214,24 +206,16 @@ header {
     border-radius: 15px;
 
     position: absolute;
-    /* Абсолютное позиционирование кнопки */
     top: 10px;
-    /* Отступ сверху */
     right: 10px;
-    /* Отступ справа */
-    /* padding: 10px 15px; */
 }
 
 .priceList {
     position: relative;
-    /* Для абсолютного позиционирования кнопки */
     display: flex;
     flex-wrap: wrap;
-    /* Позволяет элементам переноситься на новую строку */
     justify-content: center;
     align-items: flex-start;
-    /* Центрирует элементы по горизонтали */
-    /* margin: 20px; */
 }
 
 .priceBlock {
@@ -243,33 +227,24 @@ header {
 
 .priceImg {
     position: relative;
-    /* Для позиционирования */
     margin: 10px;
     overflow: hidden;
-    /* Скрывает часть изображения, выходящую за границы */
-
     width: calc(70%);
     height: auto;
 }
 
 .priceBlockImg {
     width: 100%;
-    /* Ширина 100% для адаптивности */
     height: auto;
-    /* Автоматическая высота для сохранения пропорций */
     display: block;
-    /* Убирает пробелы под изображением */
 }
 
 .container {
     padding-top: 200px;
     max-width: 1920px;
     min-width: auto;
-
     height: inherit;
-
     margin: 0 auto;
-
 }
 
 #scrollToTop {
@@ -314,24 +289,23 @@ header {
 }
 
 .headerBox {
-    display: flex; /* Обязательно добавьте это для использования flexbox */
+    display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        position: fixed; /* Фиксируем заголовок */
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 1000; /* Повышаем уровень по сравнению с другими элементами */
-        background-color: rgb(200, 0, 0); /* Цвет фона заголовка */
-        padding: 10px 20px; /* Внутренние отступы */
+        z-index: 1000; 
+        background-color: rgb(200, 0, 0); 
+        padding: 10px 20px; 
 }
 
 .logoBox {
     width: 200px;
     height: 200px;
-
     display: flex;
     align-items: center;
 }
@@ -377,11 +351,9 @@ li>img {
 
 .contactsBox {
     width: auto;
-
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     align-items: center;
 }
 
@@ -392,7 +364,6 @@ li>img {
     gap: 20px;
     max-width: auto;
     min-width: auto;
-
     align-items: flex-start;
     margin: 0 30px;
 }
@@ -409,7 +380,6 @@ li>img {
 .contactsBox>ul>li>a:hover {
     transition: 0.1s;
     border-bottom: 2px solid var(--bgColor);
-
 }
 
 /* MAIN */
@@ -436,18 +406,14 @@ main>.container {
     flex-wrap: wrap;
     gap: 0px;
     justify-content: center;
-
-
 }
 
 .galeruLinks {
     position: relative;
     display: block;
     border: 1px solid var(--bgColor);
-
     max-width: 630px;
     min-width: auto;
-
     max-height: 350px;
     flex: 1 0 500px;
 }
@@ -472,31 +438,21 @@ main>.container {
 .galeryItem {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 .galeryTxt {
     position: absolute;
-
     z-index: 100;
-
-    /* margin-top: 100px; */
-
     top: 45%;
     left: 0;
     right: 0;
-
     color: var(--bgColor);
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-
     max-width: 300px;
-
-    /* justify-content: center;
-    align-items: center; */
     margin: 0 auto;
 }
 
@@ -1821,7 +1777,7 @@ button[type="submit"]:hover {
 .video-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Центрируем видео */
+    justify-content: center;
     margin: 20px 0;
 }
 
