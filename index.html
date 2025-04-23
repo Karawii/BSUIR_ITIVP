@@ -15,6 +15,7 @@
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
     <button id="scrollToTop" title="Go to top" onclick="scrollToTop()"></button>
+<<<<<<< HEAD
     <script src="script.js"></script>
     <header>
         <div class="container">
@@ -24,6 +25,32 @@
                         <img src="img/favicon/12.png" alt="aaa">
                     </a>
                 </div>
+=======
+    <script>
+        window.onscroll = function() {
+            const button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show'); 
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <header>
+        <div class="container">
+            <div class="contentBox headerBox">
+    
+                <div class="box logoBox"><a href="index.html">
+                        <img src="img/favicon/12.png"
+                            alt="aaa">
+                    </a>
+                </div>
+   
+>>>>>>> a510510804e06d09be067075b22a8ced78172c9b
                 <div class="box ourAdvabtages">
                     <ul>
                         <li><img src="img/IcoLogo/quality.png" alt="качество нашего товара">
