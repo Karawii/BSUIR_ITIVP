@@ -63,7 +63,7 @@ h4,
 h5,
 h6 {
     font-family: MainText, sans-serif;
-    color: rgb(200, 0, 0);
+    color: var(--akcentColor);
     margin: 0 auto;
     font-size: 48px;
     text-align: center;

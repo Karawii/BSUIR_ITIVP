@@ -1,26 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('img[data-src]'); 
+    // Ищем все изображения на странице, включая картинки с изображениями YouTube
+    const images = document.querySelectorAll('img');
 
+    // Функция для загрузки изображений
     function loadImage(image) {
-        const src = image.getAttribute('data-src');
+        const src = image.getAttribute('data-src'); // Получаем путь к изображению из data-src
         if (src) {
-            image.src = src;
-            image.onload = () => image.classList.add('loaded');  
-            image.removeAttribute('data-src');  
+            image.src = src; // Устанавливаем src
+            image.onload = () => {
+                image.classList.add('loaded'); // После загрузки добавляем класс loaded
+            };
+            image.removeAttribute('data-src'); // Убираем атрибут data-src
         }
     }
 
+    // Используем IntersectionObserver для отслеживания изображений, которые видны на экране
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                loadImage(entry.target);  
-                observer.unobserve(entry.target);  
+                loadImage(entry.target); // Загружаем изображение, если оно видимо
+                observer.unobserve(entry.target); // Прекращаем отслеживание этого изображения
             }
         });
-    }, { threshold: 0.1 }); 
+    }, {
+        threshold: 0.1 // Порог видимости, когда 10% изображения на экране — оно будет загружено
+    });
 
     images.forEach(image => {
-        observer.observe(image); 
+        // Преобразуем изображения для lazy loading
+        const src = image.src;
+        image.setAttribute('data-src', src); // Переносим исходный src в data-src
+        image.removeAttribute('src'); // Убираем исходный атрибут src
+        observer.observe(image); // Начинаем наблюдать за изображением
     });
 });
 
