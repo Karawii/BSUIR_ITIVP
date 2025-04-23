@@ -1,6 +1,22 @@
 :root {
     --bgColor: rgb(255, 255, 255);
     --akcentColor: rgb(200, 0, 0);
+    --akcentColor2: rgb(200, 0, 0);
+    --Bom: rgb(34, 34, 34); 
+}
+
+.dark-theme {
+    --bgColor: rgb(34, 34, 34); 
+    --akcentColor: rgb(255, 255, 255);
+    --Bom: rgb(255, 255, 255); 
+}
+
+.theme-toggle {
+    padding: 10px 20px;
+    background-color: var(--bgColor);
+    color: var(--Bom);
+    border: none;
+    cursor: pointer;
 }
 
 @font-face {
@@ -41,7 +57,7 @@ html::-webkit-scrollbar-thumb {
 
 a {
     text-decoration: none;
-    color: var(--bgColor);
+    color: white;
 }
 
 li {
@@ -149,8 +165,8 @@ header {
     height: auto;
     max-height: 200px;
     width: 100%;
-    background-color: var(--akcentColor);
-    color: var(--bgColor);
+    background-color: var(--akcentColor2);
+    color: white;
     padding: 0 auto;
 }
 
@@ -251,8 +267,8 @@ header {
     position: fixed;
     bottom: 20px;
     right: 40px;
-    background-color: #ff0000; 
-    color: white;
+    background-color: var(--akcentColor); 
+    color: var(--bgColor);
     border: none;
     border-radius: 50%; 
     width: 65px;
@@ -272,7 +288,7 @@ header {
 }
 
 #scrollToTop:hover {
-    background-color: #ff4545; 
+    background-color: var(--akcentColor); 
 }
 
 #scrollToTop:before {
@@ -299,9 +315,12 @@ header {
         left: 0;
         right: 0;
         z-index: 1000; 
-        background-color: rgb(200, 0, 0); 
+        background-color: var(--akcentColor2); 
+        color: white;
         padding: 10px 20px; 
 }
+
+
 
 .logoBox {
     width: 200px;
@@ -314,6 +333,7 @@ header {
     height: 150px;
     width: 150px;
     margin: 0 auto;
+    color: var(--akcentColor);
 }
 
 .logoBox>a>img {
@@ -447,7 +467,7 @@ main>.container {
     top: 45%;
     left: 0;
     right: 0;
-    color: var(--bgColor);
+    color: white;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -937,6 +957,7 @@ form {
         right: 0;
         z-index: 1000; 
         padding: 10px 20px; 
+        color: var(--akcentColor);
     }
 
     .logoBox {
@@ -951,6 +972,7 @@ form {
         height: 100px;
         width: 100px;
         margin: 0 auto;
+        color:var(--akcentColor);
     }
 
     .logoBox>a>img {
@@ -1140,6 +1162,7 @@ form {
         height: 90px;
         width: 90px;
         margin: 5px;
+        color: var(--akcentColor);
     }
 
     .logoBox>a>img {
@@ -1349,6 +1372,7 @@ form {
         height: 50px;
         width: 50px;
         margin: 5px;
+        color: var(--akcentColor);
     }
 
     .logoBox>a>img {
@@ -1530,6 +1554,7 @@ form {
     form {
         max-width: 550px;
         min-width: auto;
+        color: var(--Bom);
     }
 
     #zeroImg {
@@ -1631,6 +1656,7 @@ table {
     width: 100%; 
     min-width: 600px;
     border-collapse: collapse; 
+    color: var(--Bom);
 }
 
 th, td {
@@ -1641,7 +1667,7 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4; 
+    background-color: var(--bgColor); 
 }
 
 button {
@@ -1668,13 +1694,19 @@ button:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--bgColor);
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 400px; 
     border-radius: 5px; 
+    color: black;
 }
+
+.modal-content>h2{
+    color: var(--Bom);
+}  
+
 
 .close {
     color: #aaa;
@@ -1693,6 +1725,7 @@ button:hover {
 label {
     display: block;
     margin-top: 10px;
+    color: var(--Bom)
 }
 
 input {
@@ -1771,6 +1804,7 @@ button[type="submit"]:hover {
 }
 
 .service-item p {
+    color : var(--akcentColor);
     font-size: 1em;
 }
 
@@ -1814,4 +1848,5 @@ button[type="submit"]:hover {
 .schedule {
     margin-top: 30px; 
     margin-bottom: 30px; 
+    color: black;
 }
