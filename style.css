@@ -289,11 +289,7 @@ header {
 }
 
 .headerBox {
-<<<<<<< HEAD
-    display: flex;
-=======
-    display: flex;/
->>>>>>> a510510804e06d09be067075b22a8ced78172c9b
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
