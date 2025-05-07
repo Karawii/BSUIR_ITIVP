@@ -957,7 +957,7 @@ form {
         right: 0;
         z-index: 1000; 
         padding: 10px 20px; 
-        color: var(--akcentColor);
+        color: var(--AkcentColor2);
     }
 
     .logoBox {

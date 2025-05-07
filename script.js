@@ -55,10 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const themeToggleButton = document.getElementById("themeToggle");
-
-
     const currentTheme = localStorage.getItem("theme");
-
 
     if (currentTheme === "dark") {
         document.body.classList.add("dark-theme");
@@ -66,10 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.remove("dark-theme");
     }
 
-
     themeToggleButton.addEventListener("click", function() {
         document.body.classList.toggle("dark-theme");
-
 
         if (document.body.classList.contains("dark-theme")) {
             localStorage.setItem("theme", "dark");
