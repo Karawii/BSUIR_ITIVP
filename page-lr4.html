@@ -14,7 +14,7 @@
 
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
-    <script src="script.js"></script>
+    <button id="scrollToTop" onclick="scrollToTop()">Наверх</button>
     <header>
         <div class="container">
             <div class="contentBox headerBox">
@@ -77,60 +77,19 @@
                     <img src="img/otherImg/MainPage/5.jpg" alt="" class="galeryItem">
                     <p class="galeryTxt">ЛР №4</p>
                 </a>
+                </section>
+
+            <section class="search-section">
+                <input type="text" id="movieSearch" placeholder="Поиск фильма...">
+                <button id="searchButton">Найти фильм</button>
             </section>
 
-            <section>
-                <article>
-                    <h2>Как мы работаем</h2>
-                    <div class="markeredTekst">
-                        <span>1</span>
-                        <ol>Запись на занятия. Вы можете сделать это любым удобным способом:
-                            <li>заполнив форму на сайте,</li>
-                            <li>связаться с нами по телефону,</li>
-                            <li>также вы можете написать нам в Instagram.</li>
-                        </ol>
-                    </div>
-                    <div class="markeredTekst">
-                        <span>2</span>
-                        <p>После записи вы получите подтверждение и все инструкции по занятиям.</p>
-                    </div>
-                    <div class="markeredTekst">
-                        <span>3</span>
-                        <p>Приходите в зал в спортивной форме и с хорошим настроением!</p>
-                    </div>
-                    <div class="markeredTekst">
-                        <span>4</span>
-                        <p>Наш тренер проведет для вас разминку и расскажет о тренировочном процессе.</p>
-                    </div>
-                    <div class="markeredTekst">
-                        <span>5</span>
-                        <p>После тренировки вы можете обсудить результаты и задать вопросы тренеру.</p>
-                    </div>
-                    <div class="markeredTekst">
-                        <span>6</span>
-                        <p>Мы всегда готовы поддержать вас на пути к вашим спортивным целям!</p>
-                    </div>
-                </article>
-            </section>
-
-            <section class="OurWork">
-                <article>
-                    <h2>Где мы работаем?</h2>
-                </article>
+            <section id="movieDetails">
+                <!-- Здесь будут выводиться данные о фильме -->
             </section>
         </div>
     </main>
-    <footer>
-        <div>
-            <section class="mapAndCopyright">
-                <div class="map">
-                    <iframe data-src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d107790.38507069457!2d27.534107329261015!3d53.89906014979795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQtNGA0LXQvdCw0LvQuNC9!5e1!3m2!1sru!2sby!4v1739980428644!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
-                </div>
-                <div class="copyright">
-                    <p>© 2025 Адреналин </p>
-                </div>
-            </section>
-        </div>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
